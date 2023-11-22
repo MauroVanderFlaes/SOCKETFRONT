@@ -7,7 +7,7 @@
     let socketServer = null;
 
     onMounted(() => {
-        socketServer = new WebSocket('ws://localhost:3000/primus');
+        socketServer = new WebSocket('ws://api-socket.onrender.com/primus');
         //listen for data from server
         socketServer.onmessage = (event) => {
             let data = JSON.parse(event.data);
